@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="content-section">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Hello</legend>
+                <h4>Tosmai te-ai deconectat</h4>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit"><a href="{% url 'login' %}">conecteaza-te din nou</a></button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">Ai nevoie de un cont? <a href="{% url 'register' %}">Inregistreaza-te</a></small>
+        </div>
+    </div>
+{% endblock content %}
